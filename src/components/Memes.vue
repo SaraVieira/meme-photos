@@ -7,7 +7,7 @@
 
         <!-- Error -->
         <div v-else-if="error" class="error apollo">An error occured</div>
-        <div v-else-if="data.assets">
+        <div v-else-if="data && data.assets">
           <article v-for="meme in data.assets" :key="meme.id" class="fl w-50 w-25-l link overflow-hidden relative meme sans-serif">
             <Meme :meme="meme" />
           </article>
