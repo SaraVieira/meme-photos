@@ -1,14 +1,14 @@
 <template>
   <article>
-    <div role="img" aria-label="Primer movie" class="grow aspect-ratio--4x6 " :style="`background: url(${meme.image.url}) no-repeat center center; background-size: cover;`"></div>
+    <div role="img" aria-label="Primer movie" class="grow aspect-ratio--4x6 " :style="`background: url(${meme.url}) no-repeat center center; background-size: cover;`"></div>
     <div class="hover pa2">
-      <h1 class="sans-serif black f3 mt0 lh-title">{{meme.name}}</h1>
+      <!-- <h1 class="sans-serif black f3 mt0 lh-title">{{meme.name}}</h1> -->
 
       <div class="measure relative">
-        <label for="name" class=" f6 b mb2">Image URL
+        <label for="meme" class=" f6 b mb2">Image URL
         </label>
-        <input id="url" class="input-reset ba b--black-20 pa2 mb2 w-100" type="text" aria-describedby="name-desc" :value="meme.image.url">
-        <button class="f6 link ph3 pv2 mb2 dib white bg-black copy pointer" type="button" v-clipboard:copy="meme.image.url" v-bind:class="{'bg-green ' : copied }" v-clipboard:success="onCopy">
+        <input class="input-reset ba b--black-20 pa2 mb2 w-100" type="text" id="meme" :value="meme.url">
+        <button class="f6 link ph3 pv2 mb2 dib white bg-black copy pointer" type="button" v-clipboard:copy="meme.url" v-bind:class="{'bg-green ' : copied }" v-clipboard:success="onCopy">
           {{copied ? 'Copied!' : 'Copy!'}}
         </button>
       </div>
@@ -22,12 +22,12 @@ export default {
       copied: false
     }
   },
-  name: 'meme',
+  name: 'Meme',
   props: ['meme'],
   methods: {
     onCopy: function (e) {
       this.copied = true
-      window.setTimeout(() => this.copied = false, 2000)
+      window.setTimeout(() => { this.copied = false }, 2000)
     }
   }
 }

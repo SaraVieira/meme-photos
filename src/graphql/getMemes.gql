@@ -1,11 +1,6 @@
 {
-  memes {
-    emoji
-    likes
-    cases
-    name
-    image {
-      url
-    }
+  assets {
+    id
+    url
   }
 }
