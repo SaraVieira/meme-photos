@@ -1,0 +1,11 @@
+{
+  memes {
+    emoji
+    likes
+    cases
+    name
+    image {
+      url
+    }
+  }
+}
