@@ -20,6 +20,8 @@
     "@vue/cli-service": "^3.0.0-beta.15",
     "@vue/eslint-config-standard": "^3.0.0-rc.3",
     "graphql-tag": "^2.9.0",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
     "vue-cli-plugin-apollo": "^0.14.6",
     "vue-template-compiler": "^2.5.16"
   },
