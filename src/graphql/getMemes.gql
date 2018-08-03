@@ -1,6 +1,8 @@
-{
-  assets {
-    id
-    url
+query getMemes( $photoshoped: Boolean) {
+  memes(where: { photoshoped: $photoshoped }) {
+    photo {
+      url
+    }
+    photoshoped
   }
 }

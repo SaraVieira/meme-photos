@@ -2,8 +2,6 @@
   <article>
     <div role="img" aria-label="Primer movie" class="grow aspect-ratio--4x6 " :style="`background: url(${meme.url}) no-repeat center center; background-size: cover;`"></div>
     <div class="hover pa2">
-      <!-- <h1 class="sans-serif black f3 mt0 lh-title">{{meme.name}}</h1> -->
-
       <div class="measure relative">
         <label for="meme" class=" f6 b mb2">Image URL
         </label>

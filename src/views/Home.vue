@@ -1,7 +1,7 @@
 <template>
   <div class="avenir">
     <Header />
-    <Memes msg="Welcome to Your Vue.js App" />
+    <Memes />
   </div>
 </template>
 

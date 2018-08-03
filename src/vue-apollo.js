@@ -8,7 +8,7 @@ Vue.use(VueApollo)
 // Config
 const defaultOptions = {
   httpEndpoint:
-    'https://api-euwest.graphcms.com/v1/cjj3vvxs60re301dfutlxpx4y/master',
+    'https://api-euwest.graphcms.com/v1/cjke2kn7p00ol01d2pinkptdj/master',
   ssr: false
 
   // Client local data (see apollo-link-state)
