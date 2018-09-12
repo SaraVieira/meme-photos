@@ -8,5 +8,8 @@
     </a>
     <h1 class="mt2 mb0 baskerville i fw1 f1">Sara Meme Photos</h1>
     <h2 class="mt2 mb0 f6 fw4 ttu tracked">If I am going to be a meme might aswell make a webiste</h2>
+    <h2 class="mt4 mb0 f6 fw4 ttu tracked">
+      <router-link to="/generator">Go to Meme Generator</router-link>
+    </h2>
   </header>
 </template>
