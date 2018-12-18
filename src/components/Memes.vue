@@ -32,6 +32,26 @@
               v-if="selected"
               :src="selected.photo.url"
             />
+            <label
+              for="meme"
+              class=" f6 b mb2"
+            >Image URL
+            </label>
+            <input
+              class="input-reset ba b--black-20 pa2 mb2 w-100"
+              type="text"
+              id="meme"
+              :value="selected ? selected.photo.url : data.memes[0].photo.url"
+            >
+            <button
+              class="f6 link ph3 pv2 mb2 dib white bg-black copy pointer"
+              type="button"
+              v-clipboard:copy="selected ? selected.photo.url : data.memes[0].photo.url"
+              v-bind:class="{'bg-green ' : copied }"
+              v-clipboard:success="onCopy"
+            >
+              {{copied ? 'Copied!' : 'Copy!'}}
+            </button>
           </div>
         </div>
         <div
@@ -44,50 +64,57 @@
 </template>
 
 <script>
-import Meme from "./Meme";
+import Meme from './Meme'
 export default {
-  data() {
+  data () {
     return {
       photoshoped: null,
-      selected: null
-    };
+      selected: null,
+      copied: false
+    }
   },
   components: {
     Meme
   },
 
   methods: {
-    shuffle: function(array) {
-      var currentIndex = array.length;
-      let temporaryValue = null;
-      let randomIndex = null;
+    shuffle: function (array) {
+      var currentIndex = array.length
+      let temporaryValue = null
+      let randomIndex = null
 
-      // While there remain elements to shuffle...
-      while (0 !== currentIndex) {
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1;
+      while (currentIndex !== 0 && !this.called) {
+        randomIndex = Math.floor(Math.random() * currentIndex)
+        currentIndex -= 1
 
         // And swap it with the current element.
-        temporaryValue = array[currentIndex];
-        array[currentIndex] = array[randomIndex];
-        array[randomIndex] = temporaryValue;
+        temporaryValue = array[currentIndex]
+        array[currentIndex] = array[randomIndex]
+        array[randomIndex] = temporaryValue
       }
-      return array;
+
+      this.called = true
+      return array
+    },
+    onCopy: function (e) {
+      this.copied = true
+      window.setTimeout(() => {
+        this.copied = false
+      }, 2000)
     }
   },
   computed: {
     photoshopedComputer: {
-      get: function() {
-        return this.photoshoped;
+      get: function () {
+        return this.photoshoped
       },
-      set: function(newValue) {
-        const value = newValue ? true : null;
-        this.photoshoped = value;
+      set: function (newValue) {
+        const value = newValue ? true : null
+        this.photoshoped = value
       }
     }
   }
-};
+}
 </script>
 <style>
 *,

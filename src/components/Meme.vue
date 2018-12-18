@@ -1,46 +1,26 @@
 <template>
   <article class="meme">
     <img :src="meme.url" />
-    <!-- <label
-      for="meme"
-      class=" f6 b mb2"
-    >Image URL
-    </label>
-    <input
-      class="input-reset ba b--black-20 pa2 mb2 w-100"
-      type="text"
-      id="meme"
-      :value="meme.url"
-    >
-    <button
-      class="f6 link ph3 pv2 mb2 dib white bg-black copy pointer"
-      type="button"
-      v-clipboard:copy="meme.url"
-      v-bind:class="{'bg-green ' : copied }"
-      v-clipboard:success="onCopy"
-    >
-      {{copied ? 'Copied!' : 'Copy!'}}
-    </button> -->
   </article>
 </template>
 <script>
 export default {
-  data() {
+  data () {
     return {
       copied: false
-    };
+    }
   },
-  name: "Meme",
-  props: ["meme"],
+  name: 'Meme',
+  props: ['meme'],
   methods: {
-    onCopy: function(e) {
-      this.copied = true;
+    onCopy: function (e) {
+      this.copied = true
       window.setTimeout(() => {
-        this.copied = false;
-      }, 2000);
+        this.copied = false
+      }, 2000)
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .copy {
