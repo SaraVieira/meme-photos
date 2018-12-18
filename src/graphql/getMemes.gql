@@ -1,5 +1,5 @@
-query getMemes( $photoshoped: Boolean) {
-  memes(where: { photoshoped: $photoshoped }) {
+query getMemes {
+  memes {
     photo {
       url
     }
