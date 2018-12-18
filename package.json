@@ -1,29 +1,27 @@
 {
   "name": "meme-photos",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "dev": "vue-cli-service serve"
   },
   "dependencies": {
-    "tachyons": "^4.10.0",
-    "vue": "^2.5.16",
-    "vue-apollo": "^3.0.0-beta.10",
-    "vue-clipboard2": "^0.2.0",
-    "vue-router": "^3.0.1"
+    "tachyons": "^4.11.1",
+    "vue": "^2.5.21",
+    "vue-apollo": "^3.0.0-beta.26",
+    "vue-clipboard2": "^0.2.1",
+    "vue-router": "^3.0.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.0.0-beta.15",
-    "@vue/cli-plugin-eslint": "^3.0.0-beta.15",
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.1",
     "@vue/cli-service": "^3.0.0-beta.15",
-    "@vue/eslint-config-standard": "^3.0.0-rc.3",
-    "graphql-tag": "^2.9.0",
-    "node-sass": "^4.9.2",
-    "sass-loader": "^7.0.3",
-    "vue-cli-plugin-apollo": "^0.14.6",
-    "vue-template-compiler": "^2.5.16"
+    "@vue/eslint-config-standard": "^4.0.0",
+    "graphql-tag": "^2.10.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "vue-cli-plugin-apollo": "^0.18.1",
+    "vue-template-compiler": "^2.5.21"
   },
   "browserslist": [
     "> 1%",

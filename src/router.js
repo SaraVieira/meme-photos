@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Generator from './views/Generator.vue'
 
 Vue.use(Router)
 
@@ -13,11 +12,6 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
-    },
-    {
-      path: '/generator',
-      name: 'generator',
-      component: Generator
     }
   ]
 })
