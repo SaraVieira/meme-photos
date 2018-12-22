@@ -1,26 +1,26 @@
 <template>
-  <article class="meme">
+  <article class="meme fadeInUp animated">
     <img :src="meme.url" />
   </article>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
       copied: false
-    }
+    };
   },
-  name: 'Meme',
-  props: ['meme'],
+  name: "Meme",
+  props: ["meme"],
   methods: {
-    onCopy: function (e) {
-      this.copied = true
+    onCopy: function(e) {
+      this.copied = true;
       window.setTimeout(() => {
-        this.copied = false
-      }, 2000)
+        this.copied = false;
+      }, 2000);
     }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 .copy {
@@ -33,14 +33,23 @@ export default {
 }
 
 .meme {
+  border-radius: 2px;
+  border: 2px solid white;
   overflow: hidden;
   overflow: hidden;
   position: relative;
   height: 100px;
   cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  &:hover {
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1);
+  }
 
   img {
     width: 200%;
+    min-height: 100%;
     position: absolute;
     top: 50%;
     left: 50%;

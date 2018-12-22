@@ -3,6 +3,7 @@ import App from './App.vue'
 import { createProvider } from './vue-apollo'
 import VueClipboard from 'vue-clipboard2'
 
+import 'animate.css'
 import 'tachyons'
 import router from './router'
 
