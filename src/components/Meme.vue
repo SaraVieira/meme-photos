@@ -5,22 +5,9 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      copied: false
-    };
-  },
-  name: "Meme",
-  props: ["meme"],
-  methods: {
-    onCopy: function(e) {
-      this.copied = true;
-      window.setTimeout(() => {
-        this.copied = false;
-      }, 2000);
-    }
-  }
-};
+  name: 'Meme',
+  props: ['meme']
+}
 </script>
 <style lang="scss" scoped>
 .copy {
